@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+// Actions
+.hover {
+  cursor: pointer;
+}
+
+// PRIME CHECKBOX
+.p-field-checkbox{
+  .p-checkbox-box {
+    .p-checkbox-icon.pi-check::before {
+      margin: 2px 0px 0px 1px;
+    }
+  }
+  .label-checkbox {
+    margin-top: 8px !important;
+  }
+}
+
+// PRIME CARD
+.p-card {
+  width: 25rem;
+  margin-bottom: 2em;
+  .p-card-body {
+    .p-card-title {
+      text-align: center;
+    }
+  }
+}.p-card {
+  .p-card-body {
+    .p-card-content {
+      padding: 0;
+      .p-card-title {
+      }
+    }
+  }
+}

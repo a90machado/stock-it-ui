@@ -1,0 +1,32 @@
+<div class="container-fluid container-login">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <p-card header="">
+      <div class="text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/BCA_Marketplace_logo.svg" alt="" width="50%">
+      </div>
+      <hr>
+
+        <span class="p-input-icon-left w-100">
+          <i class="pi pi-user"></i>
+          <input type="text" pInputText placeholder="Insert employee number" class="w-100" />
+        </span>
+        <span class="p-input-icon-left w-100 mt-3">
+          <i class="pi pi-key"></i>
+          <input type="password" pInputText placeholder="Insert password" class="w-100" />
+        </span>
+
+        <div class="p-field-checkbox mt-2 d-flex d-inline-flex">
+          <p-checkbox [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
+          <label class="mt-1 ml-2 label-checkbox">Remember me</label>
+        </div>
+        <div class="mt-3">
+          <button pButton pRipple type="button" label="Sign in" class="w-100"></button>
+        </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0"><span class="hover">Forgot your password?</span></p>
+      </div>
+    </p-card>
+  </div>
+</div>
+
