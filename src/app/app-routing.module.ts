@@ -8,6 +8,22 @@ const routes: Routes = [
       {
         path: 'dashboard', loadChildren: () => import ('./features/dashboard/dashboard.module')
           .then(m => m.DashboardModule)
+      },
+      {
+        path: 'rents', loadChildren: () => import ('./features/rents/rents.module')
+          .then(m => m.RentsModule)
+      },
+      {
+        path: 'employees', loadChildren: () => import ('./features/employees/employees.module')
+          .then(m => m.EmployeesModule)
+      },
+      {
+        path: 'products', loadChildren: () => import ('./features/products/products.module')
+          .then(m => m.ProductsModule)
+      },
+      {
+        path: 'settings', loadChildren: () => import ('./features/settings/settings.module')
+          .then(m => m.SettingsModule)
       }
     ]
   }

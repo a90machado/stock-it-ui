@@ -57,7 +57,6 @@ export class SidenavComponent implements OnInit {
   }
 
   public getFAIcon(label: string): IconDefinition {
-    console.log(label)
     switch (label) {
       case 'Calendar':
         return faCalendarAlt;
@@ -70,5 +69,9 @@ export class SidenavComponent implements OnInit {
       case 'Settings':
         return faCog;
     }
+  }
+
+  public navigateToLink(routerLink: string): void {
+    this.router.navigate([routerLink]);
   }
 }

@@ -8,7 +8,11 @@
 }
 
 .content {
-  background-color: gainsboro;
+  background-color: #edf1f7;
+  .content-inside {
+    background-color: #fff;
+    border-top: 5px solid #201E5B;
+  }
 }
 
 .container-content {

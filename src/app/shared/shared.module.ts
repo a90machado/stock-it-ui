@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PrimeModule } from './prime.module';
 import { BaseModule } from './base.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TitleContentComponent } from './components/title-content/title-content.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrimeModule,
     BaseModule,
 
-    FontAwesomeModule
+    FontAwesomeModule,
+
+    TitleContentComponent
   ],
-  declarations: []
+  declarations: [TitleContentComponent]
 })
 export class SharedModule { }

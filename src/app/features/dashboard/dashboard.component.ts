@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faCalendarAlt,
+  IconDefinition
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  public titleIcon: IconDefinition = faCalendarAlt;
+
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
   }
 
 }
