@@ -2,16 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimeModule } from './prime.module';
 import { BaseModule } from './base.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     CommonModule,
     PrimeModule,
-    BaseModule
+    BaseModule,
+
+    FontAwesomeModule
   ],
   exports: [
     PrimeModule,
-    BaseModule
+    BaseModule,
+
+    FontAwesomeModule
   ],
   declarations: []
 })

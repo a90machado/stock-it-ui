@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './layout/login/login.component';
 import { SharedModule } from '../shared/shared.module';
+import { HeaderComponent } from './layout/header/header.component';
+import { SidenavComponent } from './layout/sidenav/sidenav.component';
 
 
 @NgModule({
@@ -14,8 +16,14 @@ import { SharedModule } from '../shared/shared.module';
   exports: [
     BrowserAnimationsModule,
 
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    SidenavComponent
   ],
-  declarations: [LoginComponent]
+  declarations: [
+    LoginComponent,
+    HeaderComponent,
+    SidenavComponent
+  ]
 })
 export class CoreModule { }

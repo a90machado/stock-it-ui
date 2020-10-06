@@ -1,0 +1,18 @@
+.container-menu-item {
+  cursor: pointer;
+  width: 56px;
+  height: 44px;
+  border-bottom: 1px solid #edf1f7;
+  color: #8f9bb3;
+  margin: 0 !important;
+  span.menu-item {
+    i {
+      font-size: 1em;
+    }
+  }
+}
+
+.active {
+  color: #201E5B;
+  border-left: 5px solid #201E5B;
+}

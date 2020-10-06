@@ -1,0 +1,18 @@
+.app-container {
+  height: 100vh;
+}
+
+.sidenav {
+  min-width: 56px;
+  max-width: 56px;
+}
+
+.content {
+  background-color: gainsboro;
+}
+
+.container-content {
+  position: absolute;
+  height: calc(100% - 66.25px) !important;
+  width: 100%;
+}

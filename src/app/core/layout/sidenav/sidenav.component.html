@@ -1,0 +1,9 @@
+<div class="h-100">
+  <div *ngFor="let item of getMenu()">
+    <div class="container-menu-item d-flex justify-content-center" [ngClass]="getActive(item.routerLink)">
+      <span class="menu-item align-self-center">
+        <fa-icon [icon]="getFAIcon(item.label)"></fa-icon>
+      </span>
+    </div>
+  </div>
+</div>

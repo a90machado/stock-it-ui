@@ -130,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stock-it-ui"
+    }
+  },
+  "defaultProject": "stock-it-ui",
+  "cli": {
+    "analytics": "1b213763-5d02-4d90-9350-cc65fce223d3"
+  }
 }
