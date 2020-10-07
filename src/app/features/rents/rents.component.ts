@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faPeopleCarry,
-  IconDefinition
-} from '@fortawesome/free-solid-svg-icons';
+import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons';
+import { TitleWithIcon } from 'src/app/shared';
 
 @Component({
   selector: 'app-rents',
@@ -10,7 +9,8 @@ import { faPeopleCarry,
 })
 export class RentsComponent implements OnInit {
 
-  public titleIcon: IconDefinition = faPeopleCarry;
+  public titleWithIcon: TitleWithIcon  = {  title: 'Rents',
+                                            icon: faPeopleCarry};
 
   constructor() { }
 

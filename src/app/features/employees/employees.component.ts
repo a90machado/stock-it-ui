@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faUsers,
-  IconDefinition
-} from '@fortawesome/free-solid-svg-icons';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { TitleWithIcon } from 'src/app/shared';
 
 @Component({
   selector: 'app-employees',
@@ -10,7 +9,8 @@ import { faUsers,
 })
 export class EmployeesComponent implements OnInit {
 
-  public titleIcon: IconDefinition = faUsers;
+  public titleWithIcon: TitleWithIcon  = {  title: 'Employees',
+                                            icon: faUsers};
 
   constructor() { }
 

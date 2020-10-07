@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-12 hr-border">
-    <div class="d-flex d-inline-flex mt-2 ml-3">
-      <fa-icon [icon]="icon" class="icon-title"></fa-icon>
-      <h4 class="ml-3">{{title}}</h4>
+    <div class="d-flex d-inline-flex pt-2 pl-3 w-100">
+      <fa-icon [icon]="titleWithIcont.icon" class="icon-title"></fa-icon>
+      <h4 class="ml-3">{{titleWithIcont.title}}</h4>
+      <button pButton label="{{buttonWithIcon.title}}" icon="{{buttonWithIcon.icon}}"
+              class="header-button mr-3 mb-2"
+              *ngIf="buttonWithIcon"></button>
     </div>
   </div>
 </div>

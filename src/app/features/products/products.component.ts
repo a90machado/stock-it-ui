@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faBoxes,
-  IconDefinition
-} from '@fortawesome/free-solid-svg-icons';
+import { faBoxes } from '@fortawesome/free-solid-svg-icons';
+import { TitleWithIcon } from 'src/app/shared';
 
 @Component({
   selector: 'app-products',
@@ -10,7 +9,8 @@ import { faBoxes,
 })
 export class ProductsComponent implements OnInit {
 
-  public titleIcon: IconDefinition = faBoxes;
+  public titleWithIcon: TitleWithIcon  = {  title: 'Products',
+                                            icon: faBoxes};
 
   constructor() { }
 

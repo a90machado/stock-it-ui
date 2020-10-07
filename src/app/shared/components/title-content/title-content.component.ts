@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { TitleWithIcon } from '../../models/titleWithIcon';
 
 @Component({
   selector: 'app-title-content',
@@ -7,6 +7,6 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./title-content.component.scss']
 })
 export class TitleContentComponent {
-  @Input() icon: IconDefinition;
-  @Input() title: string;
+  @Input() titleWithIcont: TitleWithIcon;
+  @Input() buttonWithIcon?: TitleWithIcon;
 }
