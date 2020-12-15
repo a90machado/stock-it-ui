@@ -30,10 +30,6 @@ export class SidenavComponent implements OnInit {
         routerLink: 'dashboard',
       },
       {
-        label: 'Rents',
-        routerLink: 'rents',
-      },
-      {
         label: 'Employees',
         routerLink: 'employees',
       },
@@ -64,8 +60,6 @@ export class SidenavComponent implements OnInit {
         return faUsers;
       case 'Products':
         return faBoxes;
-      case 'Rents':
-        return faPeopleCarry;
       case 'Settings':
         return faCog;
     }

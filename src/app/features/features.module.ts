@@ -8,7 +8,6 @@ import { SettingsModule } from './settings/settings.module';
 import { SharedModule } from 'primeng/api';
 import { CoreModule } from '../core/core.module';
 import { AppRoutingModule } from '../app-routing.module';
-import { FeaturesRoutingModule } from './features-routing.module';
 
 
 
@@ -16,7 +15,6 @@ import { FeaturesRoutingModule } from './features-routing.module';
   declarations: [FeaturesComponent],
   imports: [
     AppRoutingModule,
-    FeaturesRoutingModule,
     CommonModule,
     SharedModule,
     CoreModule,

@@ -45,12 +45,23 @@
 
 // Buttons
 .header-button.p-button {
-  margin-left: auto;
+  float: right;
   font-weight: 100;
   padding: 0.1rem 0.35rem !important;
-  font-size: 0.9rem;
+  font-size: 1rem;
   .pi {
     font-size: 0.9rem;
   }
 }
 
+// Table paginator
+.p-paginator-bottom {
+  span.p-paginator-current {
+    margin-left: auto;
+  }
+}
+
+// INPUT DATE PICKER FULL WIDTH
+.p-calendar {
+  width: 100% !important;
+}

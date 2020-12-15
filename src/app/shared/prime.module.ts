@@ -4,7 +4,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
-import {TooltipModule} from 'primeng/tooltip';
+import { TooltipModule } from 'primeng/tooltip';
+import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   imports: [
@@ -12,7 +14,9 @@ import {TooltipModule} from 'primeng/tooltip';
     InputTextModule,
     CheckboxModule,
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    TableModule,
+    CalendarModule
   ],
   exports: [
     CardModule,
@@ -20,7 +24,9 @@ import {TooltipModule} from 'primeng/tooltip';
     CheckboxModule,
     ButtonModule,
     MenubarModule,
-    TooltipModule
-  ]
+    TooltipModule,
+    TableModule,
+    CalendarModule
+  ],
 })
-export class PrimeModule { }
+export class PrimeModule {}

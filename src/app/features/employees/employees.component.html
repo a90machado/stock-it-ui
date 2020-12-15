@@ -1,7 +1,41 @@
 <app-title-content [titleWithIcont]="titleWithIcon"></app-title-content>
 <div class="row">
-  <div class="col-12 mt-2 ml-3 mb-2">
-    Employees works
+  <div class="col-12 pt-2 pl-3 pb-2">
+    <div class="container-fluid">
+      <p-table [columns]="displayColumns" [value]="employees"  (sortFunction)="customSort($event)" [customSort]="true"
+        styleClass="p-datatable-sm p-datatable-striped"
+        [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="caption">
+          <div class="p-d-flex p-ai-center p-jc-between">
+              Manage Employees
+              <button pButton label="Create new" icon="pi pi-plus" class="header-button" (click)="goToCreateNewEmployee()"></button>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr *ngIf="employees.length > 0">
+                <th *ngFor="let col of columns" pSortableColumn="{{col.field}}">
+                    {{col.header}} <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{rowData[col.field]}}{{col.extraField? ', ' + rowData[col.extraField]: ''}}
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="columns.length">
+               No records found
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
   </div>
 </div>
+
 
