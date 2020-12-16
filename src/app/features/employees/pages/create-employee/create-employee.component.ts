@@ -39,7 +39,11 @@ export class CreateEmployeeComponent {
         startDate: this.employeeFormGroup.get('startDate').value,
         market: this.employeeFormGroup.get('market').value
       }
-      this.employeeService.createNewEmployee(newEmployee, false).subscribe( () => this.router.navigate(['employees']) );
+      this.employeeService.createNewEmployee(newEmployee, false).subscribe((res=>{
+        console.log(res);
+      }),(error)=> {
+        console.log(error);
+      })
     }
   }
 
