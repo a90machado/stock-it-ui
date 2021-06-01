@@ -3,21 +3,21 @@
   <div class="col-12 pt-2 pl-3 pb-2">
     <div class="container-fluid">
       <h5 class="mb-3">Basic Information</h5>
-      <form [formGroup]="employeeFormGroup">
+      <form [formGroup]="employeeFormGroup" *ngIf="employeeFormGroup">
         <div class="d-flex flex-row">
-          <div class="col-6 p-0 mr-1">
+          <div class="col-6 p-0 mr-1 container-input">
               <input type="text" pInputText placeholder="Insert first name" class="w-100" formControlName="firstName"
               [ngClass]="{'p-invalid': !employeeFormGroup.get('firstName').valid && employeeFormGroup.get('firstName').touched}"/>
               <small class="p-invalid"
-              *ngIf="!employeeFormGroup.get('firstName').valid
+              [hidden]="!(!employeeFormGroup.get('firstName').valid
               && employeeFormGroup.get('firstName').touched
-              && !employeeFormGroup.get('firstName').hasError('pattern')">First name is required.</small>
+              && !employeeFormGroup.get('firstName').hasError('pattern'))">First name is required.</small>
               <small class="p-invalid"
-              *ngIf="!employeeFormGroup.get('firstName').valid
+              [hidden]="!(!employeeFormGroup.get('firstName').valid
               && employeeFormGroup.get('firstName').touched
-              && employeeFormGroup.get('firstName').hasError('pattern')">First name only accept letters.</small>
+              && employeeFormGroup.get('firstName').hasError('pattern'))">First name only accept letters.</small>
           </div>
-          <div class="col-6 p-0 ml-1">
+          <div class="col-6 p-0 ml-1 container-input">
             <input type="text" pInputText placeholder="Insert last name" class="w-100" formControlName="lastName"
             [ngClass]="{'p-invalid': !employeeFormGroup.get('lastName').valid && employeeFormGroup.get('lastName').touched}"/>
             <small class="p-invalid"
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="d-flex flex-row mt-2">
-          <div class="col-6 p-0 mr-1">
+          <div class="col-6 p-0 mr-1 container-input">
               <input type="text" pInputText placeholder="Insert employee number" class="w-100" formControlName="employeeNumber"
               [ngClass]="{'p-invalid': !employeeFormGroup.get('employeeNumber').valid && employeeFormGroup.get('employeeNumber').touched}"/>
               <small class="p-invalid"
@@ -43,7 +43,7 @@
               && employeeFormGroup.get('employeeNumber').touched
               && employeeFormGroup.get('employeeNumber').hasError('pattern')">Employee number only accept letters and numbers.</small>
             </div>
-          <div class="col-6 p-0 ml-1">
+          <div class="col-6 p-0 ml-1 container-input">
             <input type="text" pInputText placeholder="Insert role" class="w-100" formControlName="role"
             [ngClass]="{'p-invalid': !employeeFormGroup.get('role').valid && employeeFormGroup.get('role').touched}"/>
             <small class="p-invalid"
@@ -57,7 +57,7 @@
           </div>
         </div>
         <div class="d-flex flex-row mt-2">
-          <div class="col-6 p-0 mr-1">
+          <div class="col-6 p-0 mr-1 container-input">
             <p-calendar [showIcon]="true" inputId="icon" placeholder="Insert start date" class="w-100" formControlName="startDate" dateFormat="mm/dd/yy"
             [ngClass]="{'p-invalid': !employeeFormGroup.get('startDate').valid && employeeFormGroup.get('startDate').touched}"
             (onSelect)="employeeFormGroup.get('startDate').setValue($event)"></p-calendar>
@@ -70,7 +70,7 @@
               && employeeFormGroup.get('startDate').touched
               && employeeFormGroup.get('startDate').hasError('pattern')">Dates only in format mm/dd/yyyy.</small>
           </div>
-          <div class="col-6 p-0 ml-1">
+          <div class="col-6 p-0 ml-1 container-input">
             <input type="text" pInputText placeholder="Insert market" class="w-100" formControlName="market"
             [ngClass]="{'p-invalid': !employeeFormGroup.get('market').valid && employeeFormGroup.get('market').touched}"/>
             <small class="p-invalid"

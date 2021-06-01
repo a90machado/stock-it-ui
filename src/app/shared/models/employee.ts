@@ -6,4 +6,5 @@ export class Employee {
   market: string;
   startDate: Date;
   endDate?: Date;
+  oldEmployeeNumber?: string;
 }

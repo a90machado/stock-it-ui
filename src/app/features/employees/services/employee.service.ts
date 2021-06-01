@@ -14,7 +14,16 @@ export class EmployeeService {
   constructor(private httpClient: HttpClient) {}
 
   public createNewEmployee(employee: Employee, update: boolean): Observable<Employee> {
+    console.log(update)
     return update ? this.httpClient.put<Employee>(this.url, employee) : this.httpClient.post<Employee>(this.url, employee);
+  }
+
+  public getAllEmployees(): Observable<Employee[]> {
+    return this.httpClient.get<Employee[]>(this.url);
+  }
+
+  public getEmployeeByNumber(employeeNumber: string): Observable<Employee> {
+    return this.httpClient.get<Employee>(this.url + '/' + employeeNumber);
   }
 
 }

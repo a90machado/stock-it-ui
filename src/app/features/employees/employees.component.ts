@@ -44,10 +44,12 @@ export class EmployeesComponent implements OnInit {
   ];
 
   constructor(private employeeService: EmployeeService,
-              private router: Router) {}
+              private router: Router) { }
 
   public ngOnInit(): void {
-    this.employees = [];
+    this.employeeService.getAllEmployees().subscribe(res => {
+      this.employees = res;
+    });
   }
 
   public customSort(event: SortEvent): void {
@@ -68,6 +70,11 @@ export class EmployeesComponent implements OnInit {
       }
       return event.order * result;
     });
+  }
+
+  public selectEmployee(employee: Employee): void {
+    this.router.navigate(['employees/update/' + employee.employeeNumber])
+    
   }
 
   public goToCreateNewEmployee(): void {

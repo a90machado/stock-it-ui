@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'create-new',
     component: CreateEmployeeComponent
+  },
+  {
+    path: 'update/:employeeNumber',
+    component: CreateEmployeeComponent
   }
 ];
 
